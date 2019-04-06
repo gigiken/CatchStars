@@ -1,5 +1,10 @@
 $(document).on('mousemove touchmove', function (e) {
-    basket.css('left', e.pageX);
+    console.log(e)
+    //basket.css('left', e.pageX);
+
+     var currentX = e.originalEvent.touches ?  e.originalEvent.touches[0].pageX : e.pageX;
+
+      basket.css('left', currentX);
 });
 
 function star_down(star) {

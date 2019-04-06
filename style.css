@@ -356,7 +356,8 @@
     #start, #restart {
         width: 100%;
         left: 0;
-        font-size: 20px;
+        font-size: 18px;
+        background-size: 100% 100%;
     }
 
     #restart.error, #restart.success {
@@ -364,6 +365,7 @@
         width: 90%;
         left: 5%;
         font-size: 18px;
+        background-size: 100% 100%;
     }
    
 }

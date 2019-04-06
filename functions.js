@@ -1,5 +1,5 @@
 $(document).on('mousemove touchmove', function (e) {
-    console.log(e)
+   // console.log(e)
     //basket.css('left', e.pageX);
 
      var currentX = e.originalEvent.touches ?  e.originalEvent.touches[0].pageX : e.pageX;

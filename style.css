@@ -1,0 +1,310 @@
+*, *::before, *::after {
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+}
+ html, body {
+     height: 100%;
+     width: 100%;
+}
+
+ body {
+     padding: 0px;
+     margin: 0;
+     font-family: 'Source Sans Pro', sans-serif;
+     background: #f5f0ff;
+     -webkit-font-smoothing: antialiased;
+     position:relative;
+}
+
+/*#top-container {
+    position: absolute;
+    height: 25%;
+    top:0;
+    background-image: url('gold-stars.png'), url('galaxy-bg.png');
+    background-position: left top, center center;
+    background-repeat: repeat-x, no-repeat;    
+    background-size: cover, cover;
+
+    display: block;
+    width: 100%;
+}*/
+
+#container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #31b6ce;
+    background: url('galaxy-bg.png') no-repeat center;
+    background-size: cover;
+}
+
+#score_help {
+    text-align: center;
+    font-size: 25px;
+    background-color: #eaeaea;
+    z-index: 9;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background: url('planet.png') no-repeat center;
+    background-size: contain;
+    padding-top: 20px;
+    color: #fff5f5;
+}
+
+/*#branch {
+    position: absolute;
+    height: 2%;
+    width: 100%;
+    background-color: #7b2e00;
+    top: 23%;
+}*/
+
+.star-group {
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    top: 40px;
+    background: url('hen-right.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 100;
+    display: none;
+}
+
+#hen1 {
+    left: 10%;
+}
+
+#hen2 {
+    left: 40%;
+}
+
+#hen3 {
+    left: 70%;
+}
+
+.star {
+    position: absolute;
+    top: 130px;
+    height: 35px;
+    width: 40px;
+    /*background-color: #fff;*/
+    background: url(star1.png) no-repeat;
+    background-size: contain;
+    /*border-radius: 50%;*/
+    z-index: 99;
+    display: none;
+}
+
+#star1 {
+    left: calc(10% + 100px);
+}
+
+#star2 {
+    left: calc(40% + 100px);
+}
+
+#star3 {
+    left: calc(70% + 100px);
+}
+
+.bullseye {
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    height: 7%;
+    width: 7%;
+    background: url('bullseye1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 11;
+}
+
+#bullseye1 {
+    left: calc(10% + 100px);
+}
+
+#bullseye2 {
+    left: calc(40% + 100px);
+}
+
+#bullseye3 {
+    left: calc(70% + 100px);
+}
+
+#floor {
+    position: absolute;
+    height: 7%;
+    width: 100%;
+    background-color: #292929;
+    bottom: 0;
+    z-index: 10;
+}
+
+#basket {
+    height: 100px;
+    width: 175px;
+    position: absolute;
+    bottom: 5px;
+    background: url('basket.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 11;
+}
+#basket-inner {
+    height: 100px;
+    width: 78px;
+    position: absolute;
+    bottom: -1px;
+    left:48px;
+    background: url('basket-inner.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#score_1 {
+    /*position: absolute;*/
+    color: #424242;
+    font-size: 30px;
+    /*top: 20%;*/
+    /*left: 30%;*/
+}
+
+#restart {
+    border: 0;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    color: #fff5f5;
+    top: 40%;
+    font-size: 35px;
+    display: none;
+    cursor: pointer;
+}
+
+#restart.error {
+    border: 0;
+    position: absolute;
+    height: 39%;
+    width: 50%;
+    color: #fff5f5;
+    top: 10%;
+    font-size: 25px;
+    display: none;
+    cursor: pointer;
+    background: url('fail-message.png') no-repeat center;
+    background-size: contain;
+    left: 25%;
+    word-wrap: break-word;
+    padding: 40px;
+}
+
+
+#restart.success {
+    border: 0;
+    position: absolute;
+    height: 39%;
+    width: 50%;
+    color: #fff5f5;
+    top: 10%;
+    font-size: 25px;
+    display: none;
+    cursor: pointer;
+    background: url('win-message-gold.png') no-repeat center;
+    background-size: contain;
+    left: 25%;
+    word-wrap: break-word;
+    padding: 40px;
+}
+
+
+#start {
+    border: 0;
+    position: absolute;
+    height: 48%;
+    width: 50%;
+    color: #fff5f5;
+    top: 10%;
+    font-size: 25px;
+    cursor: pointer;
+    background: url(gold-frame.png) no-repeat center;
+    background-size: contain;
+    padding: 40px;
+    word-wrap: break-word;
+    left: 25%;
+    z-index: 100000;
+}
+
+.desktop {
+    display: block;
+    color: #e2c0c0;
+    font-size: 15px;
+    /* position: absolute; */
+    /* bottom: 20%; */
+    /* left: 20%; */
+    margin-top: 30px;
+}
+
+.mobile {
+    display: none;
+    color: #e2c0c0;
+    font-size: 15px;
+    /* position: absolute; */
+    /* bottom: 20%; */
+    /* left: 20%; */
+    margin-top: 30px;
+}
+
+.dissapointment {
+    display: none;
+    background: url('jojo-placeholder.png') no-repeat bottom center;
+    width: 50%;
+    height: 60%;
+    position: absolute;
+    bottom: 0;
+    background-size: contain;
+    z-index: 1000;
+    left: 25%;
+}
+
+
+.win {
+    display: none;
+    background: url('jem-win.png') no-repeat bottom center;
+    width: 50%;
+    height: 60%;
+    position: absolute;
+    bottom: 0;
+    background-size: contain;
+    z-index: 1000;
+    left: 25%;
+}
+
+
+
+@media only screen and (max-width: 760px) {
+    .mobile {
+        display: block;
+    }
+    .desktop {
+        display: none;    
+    }
+
+    .dissapointment {
+        width: 60%;
+        left: 20%;
+    }
+   
+}

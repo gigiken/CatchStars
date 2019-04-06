@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <title>stars</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="container">
+
+    <div id="score_help"> 
+      <span>Stars:</span> <span id="score">0</span> 
+      <br/>
+      <span>Lifes:</span> <span id="life"></span> 
+    </div>
+    <div id="top-container"></div>
+    <div id="branch"></div>
+
+    <div id="hen1" class="star-group"></div>
+    <div id="hen2" class="star-group"></div>
+    <div id="hen3" class="star-group"></div>
+
+    <div id="star1" class="star" data-bullseye='1'></div>
+    <div id="star2" class="star" data-bullseye='2'></div>
+    <div id="star3" class="star" data-bullseye='3'></div>
+
+    <div id="bullseye1" class="bullseye"></div>
+    <div id="bullseye2" class="bullseye"></div>
+    <div id="bullseye3" class="bullseye"></div>
+
+    <div id="basket">
+      <div id="basket-inner">
+         <span id="score_1"></span>
+      </div>
+     
+    </div>
+
+    <div class="dissapointment"></div>
+    <div class="win"></div>
+
+    <div id="floor"></div>
+
+    <button id="restart">
+      <span class="success-message"></span>
+      <span class="error"> Oh No!! You failed such a simple task.<br/> Don't dissapoint her again!</span>
+      <span class="desktop"> Click here to try again</span>
+      <span class="mobile"> Tap here to try again</span>
+    </button>
+    <button id="start">
+        Jem has an important task for you. <br/>Catch at least 30 stars to earn her gratitude.
+        <span class="desktop">Use mouse to control the box. Click here to start.</span>
+        <span class="mobile">Swipe to control the box. Tap here to start.</span>
+    </button>
+
+  </div>
+  <script src="jquery.min.js"></script>
+  <script src="collision_detection.js"></script>
+  <script src="variables.js"></script>
+  <script src="functions.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

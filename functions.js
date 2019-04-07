@@ -7,12 +7,12 @@ $(document).on('mousemove touchmove', function (e) {
       basket.css('left', currentX);
 });
 
-function star_down(star) {
+function star_down(star, speed) {
     star_current_position = parseInt(star.css('top'));
     star.css('top', star_current_position + speed);
 }
 
-function check_star_hits_floor(star) {
+function check_star_hits_floor(star, speed) {
     if (collision(star, floor)) {
         show_bulls_eye(star);
         decrement_life();
@@ -21,7 +21,7 @@ function check_star_hits_floor(star) {
     return false;
 }
 
-function set_star_to_initial_position(star) {
+function set_star_to_initial_position(star, speed) {
     star.css('top', star_initial_position);
 }
 
@@ -42,7 +42,7 @@ function decrement_life() {
     life_span.text(life);
 }
 
-function check_star_hits_basket(star) {
+function check_star_hits_basket(star, speed) {
     if (collision(star, basket_inner)) {
         star_top = parseInt(star.css('top'));
         if (star_top < basket_top) {
@@ -54,12 +54,21 @@ function check_star_hits_basket(star) {
 }
 
 function update_score() {
+    console.log(speed1)
+    console.log(speed2)
+    console.log(speed3)
     score++;
-    if (score % 10 === 0 && speed <= max_speed) {
-        speed++;
+    if (score % 5 === 0 && speed1 <= max_speed) {
+        speed1++;
+    }
+    if (score % 10 === 0 && speed2 <= max_speed) {
+        speed2++;
+    }
+    if (score % 12 === 0 && speed3 <= max_speed) {
+        speed3++;
     }
     score_span.text(score);
-    score_1.text(score);
+    //score_1.text(score);
 }
 
 function stop_the_game() {
